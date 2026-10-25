@@ -1,0 +1,49 @@
+export const tool={
+  "id": "E064",
+  "slug": "eng-series-spring",
+  "title": "직렬 스프링 등가강성 계산기",
+  "title_en": "Series Spring Stiffness Calculator",
+  "category": "진동",
+  "category_en": "Vibrations",
+  "fields": [
+    {
+      "key": "k1",
+      "label": "첫 스프링 강성 k₁",
+      "label_en": "First spring stiffness k₁",
+      "dimension": "stiffness",
+      "example": 100,
+      "constraint": "positive",
+      "display_unit": "Nm",
+      "display_value": "100"
+    },
+    {
+      "key": "k2",
+      "label": "둘째 스프링 강성 k₂",
+      "label_en": "Second spring stiffness k₂",
+      "dimension": "stiffness",
+      "example": 300,
+      "constraint": "positive",
+      "display_unit": "Nm",
+      "display_value": "300"
+    }
+  ],
+  "result_label": "직렬 등가강성 k_eq",
+  "result_label_en": "Equivalent series stiffness k_eq",
+  "result_dimension": "stiffness",
+  "formula": "k_eq = k₁k₂/(k₁+k₂)",
+  "purpose": "두 선형 스프링을 직렬로 연결한 등가 강성 계산",
+  "purpose_en": "Calculate the equivalent stiffness of two linear springs in series.",
+  "assumptions": "k₁,k₂>0. 두 스프링이 같은 축에서 직렬로 연결되고 연결부 질량과 기하 비선형을 무시한다. 병렬 연결·프리로드·유효질량은 제외한다.",
+  "assumptions_en": "Required: k₁,k₂>0 and two collinear linear springs in series. Excluded: connector mass, geometric nonlinearity, parallel connection and preload.",
+  "sources": [
+    {
+      "label": "Idaho State University · Springs in Series and Parallel",
+      "url": "https://www.isu.edu/physics/outreach/physics-class-demos/mechanics/springs-in-series-and-parallel/"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-series-spring/",
+  "repository": "https://github.com/NaNaCompany/eng-series-spring",
+  "output_unit": "Nm"
+};
